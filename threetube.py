@@ -1,7 +1,7 @@
 #coding:utf-8
 
 #
-# Three Tube Model, A python Class to calculate frequecny response and procee reflection transmission of resonance tube
+# Three Tube Model, A python Class to calculate frequecny response and process reflection transmission of resonance tube
 #
 
 

@@ -1,7 +1,7 @@
 #coding:utf-8
 
 #
-# Two Tube Model, A python Class to calculate frequecny response and procee reflection transmission of resonance tube
+# Two Tube Model, A python Class to calculate frequecny response and process reflection transmission of resonance tube
 #
 
 import numpy as np
