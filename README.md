@@ -22,7 +22,7 @@ Example of five tube model: tube_5p3
 ![figure5p3](docs/Figure_tube_5p3.png)  
 Example of five tube model: tube_5p4  
 ![figure5p4](docs/Figure_tube_5p4.png)  
-Example of five tube model: tube_5p3  
+Example of five tube model: tube_5p5  
 ![figure5p5](docs/Figure_tube_5p5.png)  
 
 There are above wav files in generated_waveform folder.    
