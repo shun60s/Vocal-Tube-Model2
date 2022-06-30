@@ -10,6 +10,13 @@ from matplotlib import pyplot as plt
 from scipy import signal # version > 1.2.0
 from scipy.io.wavfile import write as wavwrite
 
+# Check version
+#  Python 3.10.4, 64bit on Win32 (Windows 10)
+#  numpy 1.21.6
+#  matplotlib  3.5.2
+#  scipy 1.8.0
+
+
 class Class_Tube_Check(object):
     def __init__(self, tube):
         #
