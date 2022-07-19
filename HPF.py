@@ -7,10 +7,11 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
+
 # Check version
-#  Python 3.6.4 on win32 (Windows 10)
-#  numpy 1.14.0 
-#  matplotlib  2.1.1
+#  Python 3.10.4 on win32 (Windows 10)
+#  numpy 1.21.6 
+#  matplotlib  3.5.2
 
 
 class Class_HPF(object):
@@ -53,21 +54,23 @@ class Class_HPF(object):
         val= yi/yb
         return np.sqrt(val.real ** 2 + val.imag ** 2)
 
-    def H0(self, freq_low=100, freq_high=5000, Band_num=256):
+    def H0(self, freq_low=100, freq_high=5000, Band_num=256, freq_list=None):
         # get Log scale frequecny response, from freq_low to freq_high, Band_num points
-        amp=[]
-        freq=[]
-        bands= np.zeros(Band_num+1)
-        fcl=freq_low * 1.0    # convert to float
-        fch=freq_high * 1.0   # convert to float
-        delta1=np.power(fch/fcl, 1.0 / (Band_num)) # Log Scale
-        bands[0]=fcl
-        #print ("i,band = 0", bands[0])
-        for i in range(1, Band_num+1):
-            bands[i]= bands[i-1] * delta1
-            #print ("i,band =", i, bands[i]) 
-        for f in bands:
-            amp.append(self.fone(f))
+        #
+        if freq_list is not None:
+            bands= freq_list
+        else:
+            bands= np.zeros(Band_num+1)
+            fcl=freq_low * 1.0    # convert to float
+            fch=freq_high * 1.0   # convert to float
+            delta1=np.power(fch/fcl, 1.0 / (Band_num)) # Log Scale
+            bands[0]=fcl
+            #print ("i,band = 0", bands[0])
+            for i in range(1, Band_num+1):
+                bands[i]= bands[i-1] * delta1
+                #print ("i,band =", i, bands[i]) 
+            
+        amp=self.fone(bands)
         return   np.log10(amp) * 20, bands # = amp value, freq list
 
 
