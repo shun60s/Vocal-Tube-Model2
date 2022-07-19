@@ -47,7 +47,7 @@ Example of five tube model
 
 
 ### harmonic structure in the frequency spectrum  
-This version  introduces repeated glottal voice sourcel to explain harmonic structure in the frequency spectrum.  
+This version  introduces repeated glottal voice source to explain harmonic structure in the frequency spectrum.  
 ```
 python glottal.py
 ```

@@ -4,7 +4,7 @@
 # Glottal Volume Velocity 
 # based on A.E.Rosenberg's formula as Glottal Volume Velocity
 
-# introduce repeated glottal voice sourcel to explain harmonic structure in the frequency spectrum.
+# introduce repeated glottal voice source to explain harmonic structure in the frequency spectrum.
 
 import numpy as np
 from matplotlib import pyplot as plt
